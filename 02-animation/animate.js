@@ -8,6 +8,16 @@ ctx.strokeRect(0,0,c.width,c.height);
 var r = 8;
 var growing = true;
 var requestID;
+
+//DVD variables
+var x;
+var y;
+var width;
+var height;
+
+var vertical=true;
+var horizontal=true;
+
 var logo = new Image();
 logo.src = "logo_dvd.jpg";
 
@@ -40,14 +50,16 @@ var stop = function(){
 };
 
 var dvd = function(){
-    //if(x <= 0 || x >= c.width){
-    // }
-    //if (y <= 0 || y >= c.width){
-    //}
-    //if (){
+    if(x <= 0 || x >= c.width-width){
+	horizontal = !horizontal;
+    }
+    if (y <= 0 || y >= c.width-height){
+	vertical = !vertical;
+    }
+    if (){
 	y+=1;
-	//}
-    //y -=1;
+    }
+    y -=1;
     requestID = window.requestAnimationFrame(dvd);
 };   
 
