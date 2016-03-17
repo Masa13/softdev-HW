@@ -19,4 +19,9 @@ Selectors
       function(){
         return Math.floor(Math.random()*15)+"px"});
 
+  Instantiate new elements by appending to the "enter selection."
+
+  var barEnter = barUpdate.enter().append("div");
+
+  
   
