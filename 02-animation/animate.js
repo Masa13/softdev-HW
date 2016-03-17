@@ -61,8 +61,27 @@ var dvd = function(){
     }
     y -=1;
     requestID = window.requestAnimationFrame(dvd);
-};   
+}; 
 
 document.getElementById("start").addEventListener("click",draw);
 document.getElementById("stop").addEventListener("click",stop);
 document.getElementById("dvd").addEventListener("click",dvd);
+
+
+/*
+~3/1/16~
+
+svg augmentation notes
+
+window.setInterval(<fxn>, 16);
+--------------------------------------------------
+document.getElementByTagName;
+radius = parseInt(c.getAttribute("r"));
+
+--------------------------------------------------
+
+var c = document.createElementNS(svgID, "circle")[0];
+c.setAttribute("r", radius.toString());
+
+
+*/
