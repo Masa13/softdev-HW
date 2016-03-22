@@ -1,1 +1,14 @@
-f
+.allotted div {
+    font-size: 10px;
+    color: azure;
+    background-color: crimson;
+    text-align: left;
+}
+
+.notAllotted div {
+    font-size: 10px;
+    font-family: "Courier", Times, serif;
+    color: azure;
+    background-color: steelblue;
+    text-align: left;
+}
