@@ -1,3 +1,5 @@
+console.log('owo');
+
 var republicans_allotted = [
     ["Iowa",30],
     ["New Hampshire",23],
@@ -60,3 +62,23 @@ var republicans_notAllotted = [
     ["North Dakota",28],
     ["South Dakota",29],
 ];
+
+d3.select('.allotted')
+    .selectAll('div')
+    .data(allotted)
+    .enter().append('div')
+    .style('width', function(d) {
+	return scale(d[1]) + 'px';})
+    .text(function(d) {
+	return d[0] + " " + d[1];
+    });
+
+d3.select('.notAlloted')
+    .selectAll('div')
+    .data(not_allotted)
+    .enter().append('div')
+    .style('width', function(d) {
+	return scale(d[1]) + 'px';})
+    .text(function(d) {
+	return d[0] + " " + d[1];
+    });
