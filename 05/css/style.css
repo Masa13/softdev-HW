@@ -1,14 +1,17 @@
 .allotted div {
-    font-size: 8px;
-    color: azure;
+    font: 10px sans-serif;
     background-color: crimson;
-    text-align: left;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: white;
 }
 
 .notAllotted div {
-    font-size: 8px;
-    font-family: "Courier", Times, serif;
-    color: azure;
+    font: 10px sans-serif;
     background-color: steelblue;
-    text-align: left;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: white;
 }
