@@ -75,7 +75,7 @@ d3.select('.allotted')
 	return d[0] + " " + d[1];
     });
 
-d3.select('.notAlloted')
+d3.select('.notAllotted')
     .selectAll('div')
     .data(republicans_notAllotted)
     .enter().append('div')
