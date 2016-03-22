@@ -63,8 +63,8 @@ var republicans_notAllotted = [
     ["South Dakota",29],
 ];
 var scale = d3.scale.linear()
-    .domain([0,200])
-    .range([0,600]);
+    .domain([0,600])
+    .range([0,2000]);
 d3.select('.allotted')
     .selectAll('div')
     .data(republicans_allotted)
