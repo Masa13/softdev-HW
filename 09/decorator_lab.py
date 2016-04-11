@@ -20,13 +20,18 @@ def time(function):
 def hello(*arg):
     return "hello world"
 
-def make_bold(f):
-    return lambda : "<b>" + f() + "</b>"
-    
-def make_italic(f):
-    return lambda : "<i>" + f() + "</i>"
-    
+#a simple example of applying multiple decorators
+def make_bold(fn):
+    return lambda : "<b>" + fn() + "</b>"
+
+def make_italic(fn):
+    return lambda : "<i>" + fn() + "</i>"
+
 @make_bold
 @make_italic
-def hi():
-    return "hi"
+def hello():
+    return "hello world"
+
+helloHTML = hello()
+
+print helloHTML
