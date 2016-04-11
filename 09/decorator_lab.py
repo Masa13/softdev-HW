@@ -7,7 +7,7 @@ def args(f):
         return f(*arg)
     return inner
     
-def gettime(function):
+def time(function):
     def inner(*args):
         t1 = time.time()
         t2 = f(*args)
