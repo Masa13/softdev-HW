@@ -35,3 +35,26 @@ def hello():
 helloHTML = hello()
 
 print helloHTML
+
+###############################################
+
+def quicksort(g):
+    if len(g) <= 1:
+        return g
+    pivot = random.choice(g)
+    lower = [x for x in g if x < pivot]
+    upper = [x for x in g if x > pivot]
+    return quicksort(lower) + ([pivot]*g.count(pivot)) + quicksort(upper)
+
+
+###############################################
+def timer(f):
+    def inner(*arg):
+        t = time.time() 
+        x = f(*arg)
+        print 'execution time: ' str(time.time() - t)
+    return x
+
+#def randList(n, lower=-100, upper=100):
+#    l = []
+    
