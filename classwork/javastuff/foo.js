@@ -14,3 +14,10 @@ var f1 = {
 	console.log('better way: ' + this.x);
     }
 };
+
+var inc = function(){
+    x = 0;
+    return function(){
+	return x++;
+    };
+};
