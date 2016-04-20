@@ -21,3 +21,20 @@ var inc = function(){
 	return x++;
     };
 };
+
+var makeAdder = function(n){
+    return function(x){
+        return x+n;
+    };
+};
+//var add3 = makeAdder(3); > add3(7) --> 10
+//var add7 = makeAdder(7); > add7(5) --> 12
+
+var makeCounter = function(){
+    var i = 0;	
+
+    return {
+    	x: "this is a str"
+    }	
+};
+
