@@ -22,6 +22,13 @@ var inc = function(){
     };
 };
 
+var dec = function(){
+    x = 0;
+    return function(){
+	return x--;
+    };
+};
+
 var makeAdder = function(n){
     return function(x){
         return x+n;
@@ -32,9 +39,15 @@ var makeAdder = function(n){
 
 var makeCounter = function(){
     var i = 0;	
-
+    var get = function(){
+	return i;
+    };
     return {
-    	x: "this is a str"
+    	x: "this is a str in dict",
+	get: get,
+	set: function(x){ i=x;}
+	inc: function(){ i++;},
+	dec: function(){ i--;},
+	setx: function(n){this.x=n;},
     }	
 };
-
